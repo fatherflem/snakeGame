@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Garden Titan: Snake vs. Plastic Army Men</title>
+  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
   <style>
     html, body { margin:0; overflow:hidden; background:#0f1114; font-family:Segoe UI,Arial,sans-serif; }
     #hud { position:fixed; left:12px; top:12px; color:#e6f4e6; background:rgba(0,0,0,.45); padding:10px 12px; border:1px solid #5f7; border-radius:8px; font-size:13px; line-height:1.4; z-index:5; min-width:300px }
@@ -16,8 +17,7 @@
 <div id="hud"></div>
 <div id="waveMsg"></div>
 <div id="over"><div class="box"><h1>GAME OVER</h1><p>Press R to restart</p></div></div>
-<script type="module">
-import * as THREE from './three.module.js';
+<script>
 
 class SoundManager {
   constructor(){ this.ctx=null; this.master=null; this.muted=false; }
